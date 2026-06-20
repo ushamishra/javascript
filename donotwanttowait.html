@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+ <h1> Do not want to wait </h1>
+        <script>
+
+            function getData() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve("Hello after 20 seconds");
+        }, 20000);
+    });
+}
+
+ async function demo() {
+    console.log("Start");
+
+    // kick off async work but don't wait
+    const promise =  getData();
+
+    console.log("End immediately");
+
+    // use result later when it's ready
+    promise.then(result => {
+        console.log("Got result:", result);
+    });
+}
+
+// demo();
+
+var str1 = 200
+var str2 = "200"
+
+console.log(str1===str2)
+
+
+
+        </script>
+    </body>
+</html>

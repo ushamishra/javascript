@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Table</title>
+    <style>
+      
+      #marksTable tr,  #marksTable td{
+       
+        border: rebeccapurple solid 3px;
+      }
+
+    </style>
+</head>
+<body>
+    <h2>Student Marks List</h2>
+    <table id="marksTable" >
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be inserted here -->
+             
+        </tbody>
+    </table>
+
+    <script>
+        var list = [20, 50, 40, 30, 40, 50];
+
+        var tableBody = document.getElementById("marksTable").getElementsByTagName("tbody")[0];
+
+        var i = 0; 
+        while (i < list.length) {
+            // Create a new row
+            var row = document.createElement("tr");
+
+            // Roll No cell
+            var rollCell = document.createElement("td");
+            rollCell.textContent = i + 1; // roll number starts at 1
+            row.appendChild(rollCell); 
+
+            // Marks cell
+            var marksCell = document.createElement("td");
+            marksCell.textContent = list[i];
+            row.appendChild(marksCell); 
+
+            // Append row to table body
+            tableBody.appendChild(row);
+            i++;
+        }
+    </script>
+</body>
+</html>

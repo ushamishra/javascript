@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await Burger Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f9;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🍔 Async Burger Shop</h1>
+    <p>Click the button to simulate a kitchen Promise.</p>
+    
+    <!-- Trigger Button -->
+    <button id="orderBtn" onclick="startOrder()">Order Burger</button>
+    
+    <!-- Live Status Output -->
+    <div id="status">Click the button to place an order.</div>
+
+    <script>
+        // 1. Simulates cooking time and randomly decides if ingredients are available
+        function cookBurgerTime() {
+            return new Promise((resolve, reject) => {
+                // Wait for 2.5 seconds to simulate cooking
+                setTimeout(() => {
+                    const hasIngredients = Math.random() > 0.3; // 70% chance of success
+
+                    if (hasIngredients) {
+                        resolve("✅ Burger is ready! Enjoy your meal! 🍔");
+                    } else {
+                        reject("❌ Order failed: Out of buns! 🛑");
+                    }
+                }, 2500);
+            });
+        }
+
+        // 2. The async function that waits for the kitchen Promise
+        async function startOrder() {
+            const btn = document.getElementById("orderBtn");
+            const statusDiv = document.getElementById("status");
+
+            // Disable button during the process
+            btn.disabled = true;
+            statusDiv.innerHTML = "⏳ Order placed. Kitchen is working...";
+            statusDiv.style.color = "#333";
+
+            try {
+                // 'await' pauses here until cookBurgerTime resolves or rejects
+                const successMessage = await cookBurgerTime(); 
+                
+                // Runs if the promise is Fulfilled (resolved)
+                statusDiv.innerHTML = successMessage;
+                statusDiv.style.color = "green";
+            } catch (errorMessage) {
+                // Runs if the promise is Rejected
+                statusDiv.innerHTML = errorMessage;
+                statusDiv.style.color = "red";
+            } finally {
+                // Always runs at the end, win or lose
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

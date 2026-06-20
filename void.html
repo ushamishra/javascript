@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+    <script>
+
+     var list =[10,20,50,40,30,40,50,60,70,80,90,100,110,120,130,140,150]
+
+  
+     //variable var or let - value changes  
+
+     //value does change declare it as const
+       
+     for(const i = 0; i<list.length;i++) {
+
+        
+        if(list[i] == 100){
+         break;
+        }
+
+         console.log(list[i])
+
+     }
+
+     console.log("i =" +i)
+
+
+
+    </script>
+
+    <button
+     onclick="javascript:void(document.getElementsByTagName('h2')[0].innerHTML='I have changed')"">
+     Click me
+    </button>
+
+<h1>JavaScript Operators</h1>
+<h2>The void Operator</h2>
+
+<p>
+<a href="javascript:void(0);">Useless link</a>
+</p>
+
+<p>
+<a href="javascript:void(document.body.style.backgroundColor='red');">
+Click me to change the background color of body to red.</a>
+</p>
+
+</body>
+
+
+</html>

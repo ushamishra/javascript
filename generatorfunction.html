@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generator Function Demo</title>
+</head>
+<body>
+  <h2>Generator Function Example</h2>
+  <button id="nextBtn">Get Next Number</button>
+  <p id="output"></p>
+
+  <script>
+    // Generator function that yields numbers
+    function* numberGenerator() {
+      yield 1;
+      yield 2;
+      yield 3;
+      yield 4;
+      yield 5;
+    }
+
+    // Create generator instance
+    const gen = numberGenerator();
+
+    // Handle button click
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      const result = gen.next();
+      if (!result.done) {
+        document.getElementById("output").textContent = "Next value: " + result.value;
+      } else {
+        document.getElementById("output").textContent = "No more values!";
+      }
+    });
+  </script>
+</body>
+</html>
