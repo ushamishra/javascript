@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Software learning, fullstack courses on UI, Java, Spring Boot and Database</title>
+
+<link rel="stylesheet" href="style.css"></link>
+
+<style>
+    section {
+        text-align:center;
+        margin-top: 10px;
+        border: 2px solid rgb(255, 89, 0)
+
+    }
+    #divresult {
+
+        font-size: 20px;
+        color:red
+
+    }
+</style>
+
+<script>
+   
+
+    function pageLoadHead() {
+        console.log("page loaded header !!!")
+    }
+</script>
+
+</head>
+
+<body id="bodyid">  
+
+    <script>
+
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+
+
+        let person1 = new Person("Mounika",25)
+
+        let person2 = new Person("Usha",38)
+
+        console.log(person1.name + " "+person1.age)
+
+
+    </script>
+
+<section>
+    <h2> Division </h2>
+ <input type="text" placeholder="Enter number" id="num1">
+
+<input type="text" placeholder="Enter number" id="num2">
+
+<button onclick="callDivide()">Divide</button>
+
+<input type="hidden" name="accountno" value="478378534" />
+
+<p id="divresult"></p>
+
+</section>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
