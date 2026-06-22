@@ -1,0 +1,61 @@
+<html>
+
+<body>
+
+    <header><h1>Recursive function</h1></header>
+
+   
+
+    <main>
+
+        <div>
+         <h2>Find the factor for a number</h2>
+         <label for="name"> Enter a number:</label>
+         <input type="text" placeholder="Enter a number here" name="num">
+         <p id="result"></p>
+
+         <button type="button" id="factorbutton" onclick="calculatefactor()">Get the factor!</button>
+
+
+        </div>
+     
+
+
+
+         <script>
+
+function calculatefactor(number){  
+     var num = document.getElementsByName("num")[0].value
+     var result = factor(num)
+    document.getElementById("result").innerHTML = "Result :"+result
+    
+}
+ 
+function factor(num) {//5
+
+    if(num === 0 || num === 1)
+        return 1
+
+    return num*factor(num-1) 
+      
+
+}
+        
+
+     
+
+    </script>
+
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+
+
+
+
+</body>
+</html>
