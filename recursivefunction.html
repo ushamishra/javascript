@@ -41,8 +41,42 @@ function factor(num) {//5
 
 }
         
+ 
+ 
+function somefunction(callback) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            try {
+                callback();
+                resolve("done");
+            } catch (err) {
+                reject(err);
+            }
+        }, 7000);
+    });
+}
 
-     
+function myfunction() {
+    console.log("this is just test");
+}
+
+function test() {
+    var mypromise = somefunction(myfunction);
+
+    console.log("my test completed");
+
+    mypromise.then(() => {
+        console.log("operation done");
+    }).catch(() => {
+        console.log("do not print");
+    });
+}
+
+test();
+
+
+
+
 
     </script>
 

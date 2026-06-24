@@ -1,0 +1,75 @@
+<html>
+
+<body>
+
+    <header> <h1>Javascript Map</h1></header>
+
+    <main>
+ 
+
+<script>
+
+
+    const myMap = new Map();
+
+    // Adding key-value pairs to the Map
+    myMap.set('name', 'John Doe');
+    myMap.set('age', 30);
+    myMap.set('job', 'Developer');
+    myMap.set(1, 100);
+    myMap.set(true, "employee");
+    myMap.set("isEmployed", true);
+
+  
+    console.log(myMap.get('name')); // Output: John Doe
+    console.log(myMap.get('age'));  // Output: 30   
+    console.log(myMap.get('job'));  // Output: Developer
+
+    console.log(myMap.has('salary')); // Output: true
+
+    console.log(myMap.size); // Output: 3
+
+    console.log(myMap.delete('age')); // Output: true
+
+    console.log(myMap); // Output: 2
+
+     console.log(myMap.get(1)); 
+
+    for(let [key, value] of myMap) {
+        console.log(`${key}: ${value}`);
+
+    }
+
+    
+let arrayaccdata=[898989,"saving",889,"Usha"]
+
+let accountData = {
+    accountNumber: 898989,
+    accountType: "saving",
+    balance: 889,
+    accountHolderName: "Usha",
+    isActive: true,
+    isEmployee: true,
+}
+
+let accountMap = new Map()
+
+    accountMap.set("accountNumber", 898989)
+    accountMap.set("accountType", "saving") 
+    accountMap.set("balance", 889)
+    accountMap.set("accountHolderName", "Usha")
+    accountMap.set(true, "isActive")
+
+accountMap.forEach((value, key) => {
+    console.log(`${key}: ${value}`);
+});
+
+</script>
+
+    </main>
+    
+    <footer> <h1> </h1></footer>
+    
+</body>
+
+</html>

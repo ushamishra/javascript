@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> Functions overloading</h1>
+
+
+<h2 id="demo"></h2>
+
+<script>
+
+
+let obj = {
+
+    name:"Mounika",
+    age:25,
+    job:"Developer",
+    [Symbol("id")]: 1234
+
+
+}
+
+
+let obj1 = new Object();
+
+obj1.hobby = "sleeping"
+obj1.address="jkhjkkj jkjkjk"
+obj1.salary=888998
+
+console.log(obj.job)
+console.log(obj1.age)
+
+obj1.job="Backend engineer"
+
+console.log(obj1.job)
+
+obj1.gender="female"
+
+delete obj1.job
+
+list=[5,6,7]
+
+
+
+console.log(obj1.hasOwnProperty("job"))
+
+for(let key in obj){ 
+
+    console.log(key +" "+ obj[key])
+
+}
+
+//merging object
+
+let obj2 ={...obj,...obj1}
+
+console.log(obj2.length)
+
+
+</script>
+
+</body>
+</html>

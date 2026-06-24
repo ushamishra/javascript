@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+    <header> <h1>Javascript Date</h1></header>
+
+    <main>
+
+    <script>
+        
+       //new standard for date and time in JavaScript is Temporal API
+       //Temporal API is a new standard for date and time in JavaScript that provides a more robust and accurate way to work with dates and times. It was introduced in ECMAScript 2022 (ES2022) and is designed to address some of the limitations and inconsistencies of the existing Date object.
+       //The Temporal API provides a set of new types for working with dates and times, including
+   
+   
+   const today = Temporal.Now.plainDateISO(); 
+console.log(today.toString()); 
+
+const nextweekdate = today.add({ days: 7 });
+console.log(nextweekdate.toString());
+   </script>
+    </main>
+
+
+    </body>
+
+</html>

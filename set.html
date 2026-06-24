@@ -1,0 +1,54 @@
+<html>
+
+<body>
+
+    <header> <h1>Javascript Map</h1></header>
+
+    <main>
+ 
+
+<script>
+
+var schoolsubjectslist = new Array()
+schoolsubjectslist.push("Maths")
+schoolsubjectslist.push("Science")      
+schoolsubjectslist.push("English")
+schoolsubjectslist.push("Maths")
+
+
+console.log(schoolsubjectslist)
+
+
+var schoolsubjects = new Set()
+
+schoolsubjects.add("Maths")
+schoolsubjects.add("Science")
+schoolsubjects.add("English")
+schoolsubjects.add("Maths")
+
+console.log(schoolsubjects)
+
+schoolsubjects.delete("Maths")
+
+console.log(schoolsubjects)
+
+console.log(schoolsubjects.has("English"))
+
+console.log(schoolsubjects.size)
+
+console.log(schoolsubjects.keys())
+console.log(schoolsubjects.values())
+
+schoolsubjects.forEach(value =>{
+    console.log(value)
+})
+
+</script>
+
+    </main>
+    
+    <footer> <h1> </h1></footer>
+    
+</body>
+
+</html>
