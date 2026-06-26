@@ -1,0 +1,53 @@
+<html>
+
+<body>
+
+    <header> <h1>Javascript OOPs concept - Inheritence</h1></header>
+
+    <main>
+
+    <script>
+        
+      class Vehicle {
+        constructor(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        getDetails() {
+            return `${this.year} ${this.make} ${this.model}`;
+        }
+
+        drive() {
+            console.log(`${this.make} ${this.model} is driving.`);
+        }
+    }
+
+    class Car extends Vehicle {
+        constructor(make, model, year, doors,airconditioning) {
+            super(make, model, year);
+            this.doors = doors;
+            this.airconditioning = airconditioning;
+        }
+
+        getDetails() {
+            return `${super.getDetails()} with ${this.doors} doors and air conditioning: ${this.airconditioning}`;
+        }
+
+     
+    }
+
+    const car = new Car("Toyota", "Camry", 2022, 4, true);
+
+    console.log(car.drive());
+    console.log(car.getDetails());
+
+
+   </script>
+    </main>
+
+
+    </body>
+
+</html>
