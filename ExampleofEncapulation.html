@@ -1,0 +1,48 @@
+<html>
+
+<body>
+
+    <header> <h1>Javascript OOPs concept - Abstraction</h1></header>
+
+    <main>
+    <section><h2>Person Information</h2>
+        <div id="demo"></div>
+    </section>
+    </main>
+
+    <script>
+        
+
+         class Person {
+
+        name;
+        age;
+        gender;
+        #bankdetails;
+    
+
+        constructor(name, age, gender) {
+            this.name = name; //public property
+            this.age = age;  //public property
+            this.gender = gender;  //public property
+            this.#bankdetails = "1234567890"; // private property
+        }       
+
+    
+    }
+
+    const person = new Person("John Doe", 30, "Male");      
+
+
+    document.getElementById("demo").innerHTML = `Name: ${person.name} <br> Age: ${person.age} <br> Gender: ${person.gender} <br> Bank Details: ${person.bankdetails}`; // undefined (private property)  
+    
+
+
+
+   </script>
+    </main>
+
+
+    </body>
+
+</html>
