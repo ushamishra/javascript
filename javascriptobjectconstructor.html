@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> Javascript Object Constructor</h1>
+
+
+
+<h2 id="demo"></h2>
+
+<script>
+
+function Person(name, age, job) {
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.nationality = "Indian";
+    this.display= function() {
+        alert("My name is "+this.name + " Age  : " + this.age + " Job:  " + this.job +
+        " Hobby: " + this.hobby + " Gender: " + this.gender + " Nationality: " + this.nationality   )
+    }
+}
+
+let person1 = new Person("Mounika", 25, "Developer");
+let person2 = new Person("Ravi", 30, "Designer");
+
+
+
+Person.prototype.hobbies = function(hobby) {
+    this.hobby = hobby;
+}
+Person.prototype.setgender = function(gender) {
+
+    this.gender = gender;
+}
+
+person1.setgender("female")
+person2.setgender("male")
+
+person1.hobbies("Coding")
+person2.hobbies("Gaming")
+
+
+person1.display();
+person2.display();
+
+</script>
+
+</body>
+</html>
