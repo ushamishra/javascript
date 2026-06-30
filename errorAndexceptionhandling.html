@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> Error & Exception Handling</h1>
+
+
+<h2 id="demo"></h2>
+
+<script>
+//syntax error
+
+// console.log("Hello)
+
+//Reference error
+
+// console.log(x)
+
+//Type error
+
+// let num= 16
+
+// num.toUpperCase()
+
+//Range error
+
+// let arr = Array(-1)
+
+// console.log(arr)
+
+//custom error
+// var age = 16
+// if(age< 18)
+// throw new Error("Under 18 error ")
+
+
+//try ---catch
+try{
+var age = 16
+let arr = Array(-1)
+if(age< 18)
+throw new Error("Under 18 error ")
+}catch(error){
+    console.log(error)
+}finally{
+    console.log(20/0)
+    console.log("Hello , this is an important piece of code")
+}
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html
+<head>
+
+</head>
+<body>
+
+    <h1> Hello Dom </h1>
+
+    <address id="address" class="hello xyz abc ">
+        This is my address
+    </address>
+
+    <script>
+       var element = document.getElementsByTagName("body")
+       element[0].bgColor= "green"
+
+       
+      var address = document.getElementsByClassName("hello xyz abc")
+
+      console.log(address[0].childNodes)
+      console.log(address[0].className)
+
+
+      var h1element = document.createElement("h1")
+      h1element.innerText = "This new h1 element"
+      element[0].insertBefore(h1element,address[0])
+  
+   
+
+
+    </script>
+
+</body>
+
+</html>
