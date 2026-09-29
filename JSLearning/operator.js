@@ -11,10 +11,8 @@ function add() {
 
     resultDiv.style.display = "block"
 
-    
 
-    document.getElementById("result").innerHTML = "<h2>Result :"+sum +"</h2>";
-
+    document.getElementById("result").innerHTML = "<h2> Result :"+sum +"</h2>";
 
 }
 

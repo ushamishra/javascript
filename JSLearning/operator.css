@@ -1,21 +1,17 @@
- div {
-
-     width: 50%;
-     background-color: rgb(234, 184, 119);
-     margin-top: 20px;
-     padding: 5%;
-     margin: auto;
-     text-align: center;
-     display: flex
+ body{
+    margin: 0;
+    padding: 0;
+    background-color: azure;
  }
-
  #result{
     background-color: rgb(72, 72, 239);
     color:white;
      width: 20%;
      padding:10px;
      margin-top:15px;
-     display:none
+     display:none;
+     margin:auto;
+     margin-top: 18px;
 
  }
 
@@ -23,7 +19,36 @@
      text-align: center;
  }
 
- label {
-
-     font-weight: bolder;
+ label{
+    font-weight: bolder;
  }
+
+
+
+
+ .form-container {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items:center;/* Aligns them nicely to the left */
+    gap: 15px; /* Adds clean spacing between inputs and the button */
+    margin:auto;
+    width:40%;
+    background-color: rgb(84, 234, 234);
+    padding:20px;
+    border:2px brown solid;
+    border-radius: 12px;
+    box-shadow: 5px 10px #0f96ab;
+   
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+#allbuttons{
+    display: flex;
+    flex-flow: row;
+}
