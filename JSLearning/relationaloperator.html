@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> Relational operator,Logical operator, Assigment operator,Ternary opertaor</h1>
+
+    <script>
+
+// Relational operator
+        let a = 30;
+        let b = 50;
+
+
+        let c = a <= b;
+
+        // > < >= <=  == !=  ===
+
+        console.log(c);
+
+        if(a>b) {
+            console.log(true)
+        }
+        else {
+            console.log(false)
+        }
+
+        let d = 40
+
+          if(a!=d) {
+            console.log(true)
+        }
+        else {
+            console.log(false)
+        }
+
+        let s1 = 5;
+        let s2 = "5";
+
+        if(s1==s2)  // check for ==  and also chk for ===
+        console.log("Both s1 and s2 are equal")
+        else
+        console.log("Both s1 and s2 are not equal")
+
+
+     //   Logical operator
+
+   
+     
+    let x = a>d; //false
+    let y = a <b  //true
+    let z = x && y
+
+    // false && false
+    // false  && true
+    // true && false
+    // true && true
+
+    console.log(z)
+
+
+         
+    let x1 = a>d; //false
+    let y1 = a <b  //true
+    let z1 = x1 || y1
+
+    // false || false
+    // false  || true
+    // true || false
+    // true || true
+
+    console.log(z1)
+
+    // not operator !z1 
+
+    console.log(!z1)
+
+    //Assigment operator
+
+      let m1 = 20;
+      m1 = m1+30;
+
+      m1 += 30 // m1 = m1+30
+
+      console.log(m1)
+
+       m1 -= 60     //m1 = m1-60
+
+     console.log(m1)
+
+     m1 *= 3;  // m1 = m1*3
+
+     m1 /= 10
+
+     console.log(m1)
+     
+
+     m1 %= 4  // m1 = m1%4
+
+     console.log(m1)
+
+
+     //Ternary operator
+
+
+a>b ?  console.log(true) :  console.log(false)
+
+
+//Increment and decrement operator
+
+ let i = 10;
+
+  i += 1  // i = i+1
+
+  console.log(++i);
+   console.log(i++);
+
+   console.log(i);
+
+     i -= 1  // i = i-1
+
+  console.log(--i);
+   console.log(i--);
+
+   console.log(i);
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
