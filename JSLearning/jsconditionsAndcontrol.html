@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: rgb(13, 239, 239);
+            margin: auto;
+            border: 2px solid brown;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            width: 40%;
+            gap: 10px;
+        }
+
+        #result {
+            background-color: rgb(32, 239, 13);
+            margin: auto;
+            border: 2px solid brown;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            gap: 10px;
+        }
+    </style>
+
+
+    <script>
+
+
+        const findlength = () => {
+
+            const field = document.getElementById("name");
+            const len = field.value.length;
+
+            //Decision or condition
+
+            if (len > 10) {
+                alert("Your name is too length :(" + len)
+            } else {
+                alert("Your name is short :) " + len)
+            }
+
+            //Decision or condition
+
+            if (len >= 15) {
+                alert("Your name is lengthy :(" + len)
+            } else if (len >= 12 && len < 15) {
+                alert("Your name is short :) " + len)
+            } else if (len >= 10 && len < 12) {
+                alert("Your name is too short :) " + len)
+            }
+            else {
+
+                alert("Your name is very very  short :) " + len)
+            }
+
+
+        } //end of one function
+
+
+
+        const chooseSeviceLabel = () => {
+
+            const inputFields = document.getElementsByName("satisfaction");
+
+            inputFields.forEach((inputField) => {
+                if (inputField.checked) {
+                    const chosenValue = inputField.value;
+
+                    switch (chosenValue) {
+
+
+                        case "very_satisfied":
+
+                            //for loop to iterate through the input fields and display the result in the div with id "result"
+
+                            for (let i = 0; i < inputFields.length; i++) {
+
+
+
+                                document.getElementById("result").innerHTML += "<h2>" + "You are very satisfied with our service" + "</h2><br>";
+
+
+                            }
+
+
+
+                            break;
+                        case "somewhat_satisfied":
+                
+                  document.getElementById("result").innerHTML = "";
+
+                            displayNumbers();
+                            break;
+                        case "neutral":
+                            document.getElementById("result").innerHTML = "";
+                          displayNumbersFordoWhileLoop();
+                            break;
+                        case "dissatisfied":
+                            alert("You are dissatisfied with our service");
+                            break;
+                        default:
+                            alert("You have not selected any option");
+
+                    }
+                }
+            });
+
+        }
+
+
+        //while loop to display the numbers from 1 to 10 in the div with id "result"
+        
+        const displayNumbers = () => {
+            let i = 1;
+            while (i <= 10) {
+                document.getElementById("result").innerHTML += "<h2>" + i + "</h2><br>";
+
+
+                i++;
+            }
+        }
+
+        const displayNumbersFordoWhileLoop = () => {
+            let i = 9;
+            do {
+                document.getElementById("result").innerHTML += "<h2>" + i + "</h2><br>";
+                i++;
+            } while (i <= 10);
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+    <h1>JS Conditions</h1>
+
+
+    <div>
+
+        <label for="name">Enter your name</label>
+        <input type="text" id="name" />
+
+        <button onclick="findlength()">Find length of your name</button>
+
+    </div>
+
+    <div>
+
+        <label for="name">Enter your name</label>
+        <input type="text" id="name" />
+
+        <button onclick="findlength()">Find length of your name</button>
+
+    </div>
+
+    <fieldset>
+        <legend>How satisfied are you with our service today?</legend>
+
+        <div>
+            <input type="radio" id="sat-very" name="satisfaction" value="very_satisfied" onclick="chooseSeviceLabel()">
+            <label for="sat-very">Very Satisfied</label>
+        </div>
+
+        <div>
+            <input type="radio" id="sat-somewhat" name="satisfaction" value="somewhat_satisfied"
+                onclick="chooseSeviceLabel()">
+            <label for="sat-somewhat">Somewhat Satisfied</label>
+        </div>
+
+        <div>
+            <input type="radio" id="sat-neutral" name="satisfaction" value="neutral" checked
+                onclick="chooseSeviceLabel()">
+            <label for="sat-neutral">Neutral</label>
+        </div>
+
+        <div>
+            <input type="radio" id="sat-dissatisfied" name="satisfaction" value="dissatisfied"
+                onclick="chooseSeviceLabel()">
+            <label for="sat-dissatisfied">Dissatisfied</label>
+        </div>
+
+        <div>
+            <input type="radio" id="noval" name="satisfaction" value="noval" onclick="chooseSeviceLabel()">
+            <label for="noval">No value</label>
+        </div>
+    </fieldset>
+
+
+    <div id="result">
+
+
+    </div>
+
+
+
+</body>
+
+</html>
