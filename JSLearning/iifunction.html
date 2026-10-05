@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>IIFE Example</h1>
+
+    <script>
+        
+        // Immediately Invoked Function Expression (IIFE)
+        (function() {
+            // This variable is scoped to the IIFE and won't affect the global scope
+            let message = "Hello from IIFE!";
+            alert(message);
+        })();   
+
+        // Trying to access 'message' outside the IIFE will result in an error
+        // console.log(message); // Uncommenting this line will throw a ReferenceError
+    </script>
+</body>
+</html>

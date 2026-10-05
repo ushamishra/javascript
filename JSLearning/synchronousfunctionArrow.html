@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE in HTML Example</title>
+</head>
+<body>
+
+    <h1>IIFE Scope Protection Demo</h1>
+    <button id="myButton">Click Me</button>
+    <p id="output">Button has not been clicked yet.</p>
+
+    <!-- Script 1: A third-party or global script using a generic variable name -->
+    <script>
+        // This is a global variable
+        var count = "I am a global string!"; 
+    </script>
+
+    <!-- Script 2: Our isolated logic using an IIFE -->
+    <script>
+        (function() {
+            // This 'count' is entirely local to this IIFE. 
+            // It will NOT overwrite the global 'count' from Script 1.
+            let count = 0; 
+            
+            const button = document.getElementById('myButton');
+            const output = document.getElementById('output');
+
+            button.addEventListener('click', function() {
+                count++;
+                output.textContent = `Button clicked ${count} times.`;
+            });
+        })();
+    </script>
+
+    <!-- Script 3: Verifying that the global scope remains untouched -->
+    <script>
+        // This will print "I am a global string!", proving the IIFE protected its own 'count'
+        console.log("Global count value:", count); 
+    </script>
+
+</body>
+</html>
