@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Callback Function Example</h1>
+
+    <script>
+        // A function that takes another function as a parameter (callback)
+        function greetUser(name, callback) {
+            const greeting = `Hello, ${name}!`;
+            callback(greeting);
+        }
+
+        // A callback function that displays the greeting
+        function displayGreeting(message) {
+            alert(message);
+        }
+
+        // Using the greetUser function with displayGreeting as the callback
+        greetUser("Alice", displayGreeting);
+    </script>
+    
+</body>
+</html>
