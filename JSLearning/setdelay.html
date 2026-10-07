@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Set Delay Example</h1>
+
+    <p id="p1"></p>
+    <script>
+
+   
+
+        setTimeout(() => {
+            const p1 = document.getElementById("p1");
+            p1.textContent = "This text appears after a delay of 5 seconds.";
+            p1.style.color = "blue";
+            p1.style.fontSize = "20px";
+            p1.style.fontWeight = "bold";
+            p1.style.backgroundColor="yellow";
+            p1.style.padding="10px";
+            p1.style.border="2px solid black";
+            p1.style.borderRadius="5px";
+            p1.style.textAlign="center";
+
+        }, 5000); // Delay of 3000 milliseconds (3 seconds)
+    </script>
+    
+</body>
+</html>
