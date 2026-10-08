@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+</head>
+<body>
+
+    <h1>Display User Dashboard</h1>
+
+    <script>
+        // Simulates a database or connection status
+        const shouldFail = false; // Change to true to test the reject/error path
+
+        function getMockUserData() {
+            // Added 'reject' alongside 'resolve'
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (shouldFail) {
+                        // Trigger the rejection path
+                        reject(new Error("Failed to connect to the user database."));
+                        return;
+                    }
+
+                    const userData = [
+                        { name: "John Doe", email: "john.doe@example.com" },
+                        { name: "Jane Smith", email: "jane.smith@example.com" },
+                        { name: "Alice Johnson", email: "alice.johnson@example.com" }
+                    ];
+                    resolve(userData); 
+                }, 2000);
+            });
+        }
+
+        async function displayUserDashboard() {
+
+              alert("Fetching user data...");
+
+           await getMockUserData()
+                .then(userData => {
+                    // Display user data on the dashboard
+
+                    const b = userData;
+                    const dashboard = document.createElement('div');
+                    dashboard.innerHTML = '<h2>User Dashboard</h2>';
+                    userData.forEach(user => {
+                        const userInfo = document.createElement('p');
+                        userInfo.textContent = `Name: ${user.name}, Email: ${user.email}`;
+                        dashboard.appendChild(userInfo);
+                    });
+                    document.body.appendChild(dashboard);
+                })
+                .catch(error => {
+                    console.error('Error fetching user data:', error);
+                });
+         
+        }
+
+        displayUserDashboard();
+    </script>
+
+</body>
+</html>
