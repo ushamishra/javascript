@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="operator.css">
 <script src="operator.js"></script>
+
+
 </head>
 <body>
 
@@ -27,10 +29,12 @@
         <div>
 
         <button onclick="add()">Add</button>
-        <button onclick="add()">Substract</button>\
-        <button onclick="add()">Division</button>
-        <button onclick="add()">Multiplication</button>
-        <button onclick="add()">Module</button>
+        <button onclick="substract()">Substract</button>
+        <button onclick="division()">Division</button>
+        <button onclick="multiplication()">Multiplication</button>
+       <button  onclick="module()">Module</button>
+
+        <button  onclick="(()=>{alert('No operation selected')})()">No operation</button>
 
         </div>
       
@@ -78,6 +82,7 @@
                     console.error('Error fetching user data:', error);
                 });
             
+                const d = "This is a test variable to check scope.";
         }   
         
         displayUserDashboard();
