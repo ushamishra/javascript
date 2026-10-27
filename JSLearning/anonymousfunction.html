@@ -1,38 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-    
-    </script>
+    <link rel="stylesheet" href="operator.css">
+    <script src="operator.js"></script>
 
- 
-    
 </head>
 <body>
 
-    <button id="myButton1">Click Button1</button>
-
-    
-    <button id="myButton" onclick="showalert()">Click Button2</button>
+    <h1>Display User Dashboard</h1>
 
 
-       <script>
+    <h1>Operators</h1>
+
+     <div class="form-container"> 
+        <div class="input-group">
+            <label for="firstfield">Enter first Number</label>
+            <input type="number" id="firstfield">
+        </div>
+        
+        <div class="input-group">
+            <label for="secondfield">Enter Second Number</label>
+            <input type="number" id="secondfield">
+        </div>
+        <div>
+
+        <button onclick="add()">Add</button>
+        <button onclick="substract()">Substract</button>
+        <button onclick="division()">Division</button>
+        <button onclick="multiplication()">Multiplication</button>
+       <button  onclick="module()">Module</button>
+
+        <button  onclick="(()=>{alert('No operation selected')})()">No operation</button>
+
+        </div>
       
-        document.getElementById('myButton1').addEventListener('click', function() {
-            alert("Button1 clicked!");
-        });
-
-        function showalert() {
-            alert("Button2 clicked!");
-        }
-
-
-
-    </script>
-
+    </div>
+    
+    <div id="result"></div>
+  
     
 </body>
 </html>

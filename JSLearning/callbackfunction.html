@@ -10,8 +10,11 @@
     <h1>Callback Function Example</h1>
 
     <script>
+
+        
+
         // A function that takes another function as a parameter (callback)
-        function greetUser(name, callback) {
+        const greetUser = (name, callback) => {
             const greeting = `Hello, ${name}!`;
             callback(greeting);
         }
