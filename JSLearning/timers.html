@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+     const showHeader = () => {
+        const header = document.createElement('h1');
+        header.textContent = 'Timers Example';
+        document.body.appendChild(header);
+     }
+
+
+    const showheader2 = () => {
+            const header = document.createElement('h2');
+            header.textContent = 'This is a new header after 10 seconds';
+            document.body.appendChild(header);
+        }
+
+    const stopShowingHeader2 = (timer) => {
+        clearInterval(timer);
+    }
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const timer1 = setTimeout(showHeader,1000)
+
+        clearTimeout(timer1)
+
+        const timer = setInterval(showheader2, 2000);
+
+        setTimeout(() => {
+
+            clearInterval(timer)
+        },10000)
+    </script>
+
+    
+</body>
+</html>
